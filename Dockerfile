@@ -1,7 +1,7 @@
 FROM sergeyshow/oracle-java8
 MAINTAINER Sergey Chugay <sergey@chugay.ru>
 
-#Tomcat 9
+#Tomcat 8
 ENV tomcat="tomcat-8.tar.gz"
 ADD $tomcat /opt/
 RUN mv /opt/tomcat* /opt/tomcat
