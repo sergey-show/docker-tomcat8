@@ -2,8 +2,9 @@ FROM sergeyshow/oracle-java8
 MAINTAINER Sergey Chugay <sergey@chugay.ru>
 
 #Tomcat 8
-ADD http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz /opt/
-RUN mv /opt/apache-tomcat-* /opt/tomcat
+ADD apache-tomcat-8.5.35.zip /opt/
+RUN mv /opt/apache-tomcat-8.5.35 /opt/tomcat
+RUN rm -f /opt/apache-tomcat-8.5.35
 ENV CATALINA_HOME=/opt/tomcat \
     JAVA_HOME=/usr/java/default \
     LANG=ru_RU.UTF-8 \
