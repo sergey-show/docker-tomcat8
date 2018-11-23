@@ -2,9 +2,9 @@ FROM sergeyshow/oracle-java8
 MAINTAINER Sergey Chugay <sergey@chugay.ru>
 
 #Tomcat 8
-ENV tomcat="tomcat-8.tar.gz"
+ENV tomcat="apache-tomcat-8.gz"
 ADD $tomcat /opt/
-RUN mv /opt/tomcat* /opt/tomcat
+RUN mv /opt/apache-tomcat-* /opt/tomcat
 ENV CATALINA_HOME=/opt/tomcat \
     JAVA_HOME=/usr/java/default \
     LANG=ru_RU.UTF-8 \
