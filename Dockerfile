@@ -2,7 +2,8 @@ FROM sergeyshow/oracle-java8
 MAINTAINER Sergey Chugay <sergey@chugay.ru>
 
 #Tomcat 8
-ADD apache-tomcat-8.5.35.zip /opt/
+WORKDIR /opt/
+ADD apache-tomcat-8.5.35.zip .
 ENV CATALINA_HOME=/opt/apache-tomcat-8.5.35 \
     JAVA_HOME=/usr/java/default \
     LANG=ru_RU.UTF-8 \
